@@ -25,7 +25,7 @@ SECRET_KEY = '2amj2u%gsvbldw2-7^a8p00z!6qkj06li5ze*78f+7vha_5zc9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.60.92"]
+ALLOWED_HOSTS = ["192.168.60.92", '36.71.140.176']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'django_user_agents'
+    'django_user_agents',
+    'geoip2'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+GEOIP_PATH =os.path.join('geoip')
